@@ -6,9 +6,15 @@ function fibonacci(num) {
 	if(num === 2){
 		return 1;
 	}
-		
-	
-	return fibonacci(num - 1) + fibonacci(num - 2); 
+
+	let a = 0, b=1,temp;
+	for(let i = 2; i< num; i++) {
+		temp = a + b;
+		a = b;
+		b = temp;
+	}
+	return temp;
+	 
 	
 }
 
